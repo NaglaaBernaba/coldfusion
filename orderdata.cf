@@ -1,0 +1,10 @@
+<cfset bos = createObject("java" , "java.io.ByteArrayOutputStream").init() />  	
+<cfset gzip = createObject("java" , "java.util.zip.GZIPOutputStream").init( bos )/> 
+		
+<cfset gzip.write(sHtml.getBytes())/>
+<cfset gzip.finish()/>
+<cfset sHtml = bos.toByteArray()/>
+<cfset bos.close()/>
+<cfset gzip.close()/>
+		
+<cfset orderData = toBase64(sHtml) /
