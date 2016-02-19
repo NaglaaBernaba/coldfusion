@@ -60,7 +60,6 @@ component
 	public string function getForm(
 		required string merchantReference,
 		required string paymentAmount,
-		string returntype = 'struct',
 		string resUrl = '',
 		string merchantReturnData = '',
 		string orderData = '',
@@ -91,7 +90,6 @@ component
 	public string function getURL(
 		required string merchantReference,
 		required string paymentAmount,
-		string returntype = 'struct',
 		string resUrl = '',
 		string merchantReturnData = '',
 		string orderData = '',
@@ -122,7 +120,6 @@ component
 	public struct function generate(
 			required string merchantReference,
 			required string paymentAmount,
-			string returntype = 'struct',
 			string resUrl = '',
 			string merchantReturnData = '',
 			string orderData = '',
